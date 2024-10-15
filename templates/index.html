@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevDar website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/utils.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/about-us.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/footer.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="script" href="{{ url_for('static', filename='Javascript/index.js') }}">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="navbar-flex">
+            <img width="80px" src="{{ url_for('static', filename = 'images/main-img/logo1.svg') }}" alt="logo" id="logo" class="logo">
+            <ul id="flex">
+                <li class="item-container"><a class="item" href="/Products">Products</a></li>
+                <li class="item-container"><a class="item" href="/resources">Resources</a></li>
+                <li class="item-container"><a class="item" href="/about">About us</a></li>
+            </ul>
+            <div class="verify">
+                <div class="button">
+                    <button class="btn signup" action = "submit">
+                        <a href="/login">
+                            Login
+                        </a>
+                    </button>
+                    </button>
+                    <button class="btn dashboard">
+                        <a id='user-container' href="">
+                            <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <g id="about">
+                                    <path
+                                        d="M 16,16 C 22.236768,16 25.359022,8.4600301 20.949496,4.050504 16.53997,-0.35902218 9,2.7632323 9,9 c 0,3.865993 3.134007,7 7,7 z"/>
+                                    <path
+                                        d="M 17,18 H 15 C 8.9248678,18 4,22.924868 4,29 c 0,0.552285 0.4477153,1 1,1 h 22 c 0.552285,0 1,-0.447715 1,-1 0,-6.075132 -4.924868,-11 -11,-11 z m -2,2 C 0,0 0,0 15,20 Z"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-center-container">
+        <div class="hero-section">
+            <div class="hero-text" id="hero-text">
+                <h1 class="hero-text-heading">Optimize your customer database potential</h1>
+                <p>Your customer relationship and dealer management systems are filled with data points about your customers’ purchase and service habits, communication preferences, and even financial indicators – all of which together can tell you important stories about how and when to interact with them. DealerSocket CRM’s integrated equity mining tool, RevenueRadar makes sense of your customer data, turning insights into actions for your sales and marketing teams.</p>
+                <button>Speak with an expert</button>
+            </div>
+            <div class="hero-img">
+                <img src="{{ url_for('static', filename = 'images/main-img/hero-img.svg') }}">
+            </div>
+        </div>
+    
+    </div>
+    
+    <div class="brands">
+        <div class="logo1">
+            <img src="{{ url_for('static', filename = 'images/logo/logo1.jpg') }}" alt="">
+        </div>
+        <div class="logo2">
+            <img src="{{ url_for('static', filename = 'images/logo/logo2.jpg') }}" alt="">
+        </div>
+        <div class="logo3">
+            <img src="{{ url_for('static', filename = 'images/logo/logo3.jpg') }}" alt="">
+        </div>
+        <div class="logo4">
+            <img src="{{ url_for('static', filename = 'images/logo/logo4.jpg') }}" alt="">
+        </div>
+        <div class="logo5">
+            <img src="{{ url_for('static', filename = 'images/logo/logo5.jpg') }}" alt="">
+        </div>
+        <div class="logo6">
+            <img src="{{ url_for('static', filename = 'images/logo/logo6.jpg') }}" alt="">
+        </div>
+    </div>
+    <div class="services-container">
+        <div class="services">
+            <div class="service-head">Professional Services</div>
+            <div class="service-content">Our professional services team combines payments and financial expertise with experience integrating Stripe technology in thousands of projects. We help our customers create marketplaces, launch subscription businesses, expand globally, and more.</div>
+        </div>
+    </div>
+    <div class="box-section">
+
+        <div class="box box1">
+            <div class="content">
+                <span>Upload Your File</span>
+                <button>Upload Now</button>
+            </div>
+            <div class="box1-img">
+                <img width="200px" src="{{ url_for('static', filename = 'images/main-img/box1-img.jpg') }}" alt="">
+            </div>
+        </div>
+
+        <div class="box box2">
+            <div class="content">
+                <span>Submit Your Work</span>
+                <button>Submit Now</button>
+            </div>
+            <div class="box2-img">
+                <img width="170px" src="{{ url_for('static', filename = 'images/main-img/box2-img.jpg') }}" alt="">
+            </div>
+        </div>
+        
+
+    </div>
+
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-google-plus"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">News</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">our Team</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Vatsal & Anurag</span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

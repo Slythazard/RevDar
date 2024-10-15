@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/resources.css') }}">
+    <title>Products</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-container-flex">
+            <header class="header">
+                Analytics Dashboard
+            </header>
+            <form action="/Products" method="get,post" class="form">
+                <div class="store">
+                    <label for="st">Select Store</label>
+                    <select name="st" id="store" class="btn store-input" >
+                        {% for st in Stores %}
+                            <option value="{{ st }}">{{ st }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="cpi">
+                    <label for="CPI">Enter CPI</label>
+                    <input type="number" name="CPI" class="btn cpi-input">
+                </div>
+                <div class="week">
+                    <label for="week">Enter week of the month</label>
+                    <input type="number" name="week" class="btn week-input">
+                </div>
+                <div class="month">
+                    <label for="mt">Enter Month</label>
+                    <select name="mt" id="month" class="btn month-input">
+                        {% for mt in month %}
+                            <option value="{{ mt }}">{{ mt }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <input type="submit" value="predict" onclick="send_data()" class="btn submit">
+            </form>
+            <div class="row">
+                <d class="col12" style="text-align: center;">
+                    <h3><span id="prediction"></span></h3>
+                </d>
+            </div>
+        </div>
+    </div>
+    <br>
+    <script>
+        function form_handler(event)
+        {
+            event.preventDefault();
+        }
+        function send_data()
+        {
+            document.querySelector('form').addEventListener('submit', form_handler);
+            var storeValue = parseInt(document.getElementById('store').value);
+            var fd = new FormData(document.querySelector('form'));
+            fd.append('st', storeValue);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST','/predict', true);
+            document.getElementById("prediction").innerHTML="wait! predicting sales...";
+
+            xhr.onreadystatechange= function()
+            {
+              if(xhr.readyState == XMLHttpRequest.DONE){
+                if (xhr.status === 200) { // Check for successful response
+                    document.getElementById("prediction").innerHTML = 'Prediction: ' + xhr.responseText;
+                } 
+                else {
+                    document.getElementById("prediction").innerHTML = 'Error: Unable to predict sales.';
+                }
+              }
+            };
+
+            xhr.onload=function(){};
+            xhr.send(fd)
+        }
+    </script>
+</body>
+</html>

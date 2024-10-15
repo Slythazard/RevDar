@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'CSS/product.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&family=Rubik:wght@700&family=Varela&display=swap" rel="stylesheet">
+    <title>Resources</title>
+    <script>
+        function resizeIframe() {
+          var iframe = document.getElementById('report-frame');
+          iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+        }
+        window.onload = resizeIframe;  // Call resizeIframe on page load
+      </script>
+</head>
+<body>
+    <h1 id="header">Get set with your Dataset</h1>
+    <iframe id="report-frame" srcdoc="{{ report_html }}"></iframe>
+    <div class="form-container">
+      <form action="/resources" enctype="multipart/form-data" method="post" class="form">
+        <label class="form-label"><h2 class="form-header">Submit Data</h2></label>
+        <input type="file" name="input_file" id = "file" required>
+        <label for="file" class="container-file" id="container-file" style="background-image: url({{ url_for('static', filename='images/images/cloud.svg') }});"><p class="con-file-description">click to upload file</p>
+        <p class="con-file-desc-format">
+          (*.csv,xslx,etc. allowed only)
+        </p></label>
+        <input type="submit" value="Upload" id="submit">
+        <script>
+        document.getElementById('submit').addEventListener('click', function() {
+          var button = this;
+          button.classList.add('clicked');
+          setTimeout(function() {
+            button.classList.remove('clicked');
+          },300);
+        });
+        </script>
+      </form>
+    </div>
+</body>
+</html>

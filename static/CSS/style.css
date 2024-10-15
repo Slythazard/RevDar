@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:ital@0;1&display=swap');
+
+
+/* universal section  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Poppins", sans-serif; */
+    font-weight: 400;
+    font-style: normal;
+    /* font-family: "Roboto Mono", monospace; */
+    /*font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal; */
+}
+
+/* navbar section */
+
+.nav{
+    margin: 10px auto 50px auto;
+    padding-left: 16px;
+    max-width: 1243.2px;
+}
+
+.navbar-flex{
+    font-family: "Roboto Mono", monospace;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: flex-end;
+    width: 100%;
+}
+
+#flex {
+    list-style-type: none;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 50%;
+}
+
+.item-container{
+    display: flex;
+}
+
+.item{
+    align-self: center;
+}
+
+#flex a{
+    text-decoration: none;
+}
+
+#flex{
+    flex: 1 1 fit-content;
+}
+
+#logo{
+    max-width: 80px;
+    flex: 1 1 80px;
+}
+
+.button{
+    display: flex;
+    align-content: baseline;
+    justify-content: space-between;
+    width: fit-content;
+}
+
+.btn{
+    background-color: transparent;
+    border: none;
+}
+
+.btn.dashboard{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#user-container{
+    font-family: "Roboto Mono", monospace;
+    background-color: black;
+    text-decoration: none;
+    line-height: 2;
+    color: white;
+    border: transparent;
+    border-radius: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+#user-container svg{
+    display: block;
+    border: none;
+    padding: 8px;
+}
+
+#user-container:hover{
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+
+#about{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+
+}
+
+.signup{
+    margin-right: 5px;
+}
+
+.signup a{
+    font-family: "Roboto Mono", monospace;
+    font-size: 14px;
+    background-color: black;
+    text-decoration: none;
+    padding: 10px;
+    line-height: 2;
+    color: white;
+    border: transparent;
+    border-radius: 60px;
+}
+
+.signup a:hover{
+    font-family: "Roboto Mono", monospace;
+    color: black;
+    background-color: aliceblue;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+#user-container svg #about path{
+    fill:white;
+    fill-opacity: 1;
+    stroke: none;
+    text-decoration: none;
+}
+
+#user-container:hover svg #about path{
+    background-color: aliceblue;
+    font-family: "Roboto Mono", monospace;
+    fill: black;
+    fill-opacity: 1;
+    stroke: none;
+    text-decoration: none;
+}
+
+/* #about:hover path{
+    font-family: "Roboto Mono", monospace;
+    fill: black;
+    fill-opacity: 1;
+    stroke: none;
+    background-color: aliceblue;
+    text-decoration: none;
+} */
+/* hero section */
+
+.hero-center-container{
+    width: fit-content;
+    margin: 0 auto;
+    max-width: 1243.2px;
+    height: 50%;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero-img{
+    flex: 1 1 621.6px;
+    min-width: 320px;
+    align-self: center;
+}
+
+#hero-text{
+    font-family:"Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    flex: 1 1 621.6px;
+    padding-left: 16px;
+}
+
+#hero-text p{
+    text-align: justify;
+}
+
+.hero-text-heading{
+    font-size: 60px;
+    font-weight: 1000;
+}
+
+.hero-text button {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 12px;
+    width: fit-content;
+    gap: 12px;
+    margin: 15px auto 0px auto;
+    transition: 0.4 ease-in;
+    border: 1px solid black;
+    font-weight: 700;
+}
+
+.hero-text button:hover {
+    color: black;
+    background-color: white;
+}
+
+
+/* brands collaboration section */
+
+.brands {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+.brands img {
+    width: 150px;
+}
+
+/* services section  */
+
+.services {
+    font-family: "Popins", sans-serif; 
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1243.2px;
+    align-items:start;
+    justify-content: center;
+    padding: 40px;
+}
+
+.services-container{
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.service-head{
+    font-size: 40px;
+    font-weight: 6200;
+    background-color: rgba(91, 255, 59, 0.774);
+    color: rgb(0, 0, 0);
+    padding: 0px 6px;
+    align-self: center;
+    max-width: max-content;
+    flex: 1 1 320px;
+}
+
+.service-content{
+    padding: 0px 30px 0px 30px;
+    text-align: justify;
+    flex: 1 1 320px;
+}
+
+
+/* box section */
+
+.box-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px;
+    padding: 30px;
+    border-radius: 25px;
+    height: 225px;
+    width: 30vw;
+    border: 2px solid black;
+    box-shadow: 0px 10px 7px black;
+    margin-bottom: 60px;
+}
+
+.box button {
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    margin-top: 100px;
+    border-radius: 12px;
+    padding: 2px 12px;
+}
+
+.box1 button {
+    border: 1px solid black;
+}
+
+.box2 button {
+    color: white;
+    border: 1px solid white;
+}
+
+
+.box2 {
+    background-color: black;
+}
+
+.box span {
+    font-weight: 700;
+    font-size: 1.1rem
+}
+.box2 span {
+    background-color: white;
+    padding: 0px 6px;
+}
+
+.box1 span {
+    background-color: rgba(91, 255, 59, 0.774);
+    padding: 0px 6px;
+}
+
+.content {
+    gap: 40px;
+}
