@@ -41,24 +41,24 @@
    flask run
    Visit http://127.0.0.1:5000/ in your browser to access the app.
 
-##How It Works
+## How It Works
 
-1.Data Upload: Users can upload a CSV file containing business data.
+1. Data Upload: Users can upload a CSV file containing business data.
   - Automated EDA: Once the data is uploaded, the system processes it, generates summary statistics, visualizations, and an EDA     report using ydata_profiling.
   - Sales Prediction: Input parameters such as store ID, CPI, week, and month to predict future sales using a pre-trained           machine learning model.
 
-##Key Components
+## Key Components
    -Flask: Powers the web framework and serves the frontend.
    -Pandas: Handles data manipulation.
    -Scikit-learn: Used for machine learning, specifically for sales prediction.
    -YData Profiling: Generates the automated EDA report.
    
-##Usage
+## Usage
   - Upload your dataset through the Resources page.
   - Review the EDA report generated.
   - Use the Sales Prediction tool by selecting inputs and clicking "Predict."
     
-##File Structure
+## File Structure
    - ```plaintext
          Revdar/
          ├── templates/
@@ -73,13 +73,13 @@
          ├── requirements.txt        # Python dependencies
          └── README.md               # This file
 
-###Contributing
+### Contributing
    Contributions are welcome! Please feel free to submit a Pull Request or open an Issue.
 
-###License
+### License
    This project is licensed under the MIT License. See the LICENSE file for details.
 
-###Contact
+### Contact
    For any inquiries or support, contact:
 
    Shreshth- shreshth.k.dev@gmail.com
